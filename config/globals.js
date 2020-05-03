@@ -1,0 +1,13 @@
+export const PRIMARY_COLOR = '#fff';
+export const TEXT_COLOR = '#5f6d95';
+export const BACKGROUND_COLOR = '#f2f2f2';
+export const FONT_FAMILY = 'Roboto-Regular';
+export const SUBTITLE_FAMILY = 'Roboto-Medium';
+export const TITLE_FONT = 'Roboto';
+export const ACCENT_COLOR = '#ff1457';
+export const FONT_COLOR = '#707070';
+export const TITLE_COLOR = '#2b2c30';
+export const MAIN_COLOR = '#472743';
+export const VERSION_NO = 'v1.1.3';
+export const API_END_POINT = 'https://api.wunderbarcocktails.com/';
+export const BASE_IMG_URL = 'https://wunderbar-ah2019.s3.ap-northeast-2.amazonaws.com/';
