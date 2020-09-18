@@ -21,6 +21,12 @@ export default class CocktailListItem extends React.Component {
     }
   }
 
+  componentDidMount() {
+    console.log("[Mount] [CocktailListItem] ");
+  }
+
+  
+
   removeFavouriteCocktail(cocktail) {
     //Send To Parent
     if (this.props.onFavourite) {
@@ -52,7 +58,7 @@ export default class CocktailListItem extends React.Component {
 
     return (
       <View>
-        <SwipeRow
+        {/* <SwipeRow
           ref={(x) => (this.swiperRow = x)}
           rightOpenValue={-75}
           disableRightSwipe={true}
@@ -62,10 +68,10 @@ export default class CocktailListItem extends React.Component {
           closeOnRowPress={true}
           onRowDidOpen={() => this.onRowDidOpen()}
           recalculateHiddenLayout={true}
-        >
+        > */}
 
           {/* Hidden Row */}
-          <View style={styles.rowBack}>
+          {/* <View style={styles.rowBack}>
             {
               get(item, 'isFavourite', false) ?
                 <TouchableOpacity
@@ -78,7 +84,7 @@ export default class CocktailListItem extends React.Component {
                   style={{ backgroundColor: MAIN_COLOR, height: 70, width: 75, marginTop: 30, marginBottom: 30, justifyContent: 'center', alignItems: 'center' }}>
                 </TouchableOpacity>
             }
-          </View>
+          </View> */}
 
           {/* Visible Row */}
             <TouchableWithoutFeedback
@@ -116,7 +122,7 @@ export default class CocktailListItem extends React.Component {
 
             </TouchableWithoutFeedback>
 
-        </SwipeRow>
+        {/* </SwipeRow> */}
         {
           this.props.showDivider ?
               <View style={{height: 2, borderWidth: 1, borderColor: '#f0f0f0', marginRight: 20, marginLeft: 20 }} />

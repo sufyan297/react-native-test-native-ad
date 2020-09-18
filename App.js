@@ -26,6 +26,7 @@ export default class App extends React.Component {
   componentDidMount() {
     const data = orderBy(Cocktails, 'name', 'asc');
     this.setState({data});
+    console.log("App JS Loaded.");
   }
 
   render() {

@@ -12,17 +12,13 @@ import { View } from 'react-native';
 import { FONT_FAMILY, PRIMARY_COLOR, MAIN_COLOR } from '../config/globals';
 
 export default class AdCard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showAd: null
-    };
+
+
+  componentDidMount() {
+    console.log("AdCard Mounted.");
   }
 
   render() {
-    if (this.state.showAd === false) {
-      return null;
-    }
     return (
       <View style={{flex: 1}}>
         <NativeAdView
@@ -32,9 +28,9 @@ export default class AdCard extends React.Component {
             height: 85
           }}
           delayAdLoading={this.props.delayAdloading} // here
-          onAdLoaded={() => this.setState({showAd: true})}
+          // onAdLoaded={() => this.setState({showAd: true})}
           onAdFailedToLoad={(err) => {
-            this.setState({showAd: false});
+            // this.setState({showAd: false});
             console.log("ERR: ",err);
           }}
           onAdClicked={() => {
